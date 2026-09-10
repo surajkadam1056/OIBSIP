@@ -1,0 +1,185 @@
+# Cleaning Data
+### Project Overview
+
+This project focuses on cleaning and preparing a deliberately messy financial transactions dataset for further analysis.
+
+The project demonstrates a systematic data cleaning workflow including data quality assessment, missing value handling, duplicate removal, standardisation, outlier detection, and data type correction.
+
+---
+
+## 🎯 Objective
+
+The objective of this project is to transform a messy dataset into a clean, consistent, and analysis-ready dataset while documenting the decisions made during the cleaning process.
+
+---
+
+## 🛠️ Tech Stack
+
+* Python
+* Pandas
+* NumPy
+* Jupyter Notebook
+
+---
+
+## 📂 Dataset
+
+The dataset contains financial transaction records with information related to transactions, customers, products, payment methods, quantities, prices, and transaction status.
+
+The original dataset was intentionally messy and contained data quality issues that required cleaning.
+
+---
+
+## 🔍 Data Quality Assessment
+
+The initial dataset was inspected for:
+
+* Missing values
+* Duplicate rows
+* Incorrect data types
+* Invalid values
+* Inconsistent categorical formatting
+* Value range anomalies
+
+A data quality report was created to identify these issues before performing the cleaning operations.
+
+---
+
+## 🧹 Data Cleaning Performed
+
+### 1. Missing Data Handling
+
+Different strategies were used depending on the type and importance of the column:
+
+* Unique identifiers with missing values were removed because they cannot be reliably estimated.
+* Missing numerical values such as Quantity and Price were handled using median imputation.
+* Missing categorical values such as Transaction_Status were handled using mode imputation.
+
+Each strategy was documented in the notebook with its reasoning.
+
+### 2. Duplicate Removal
+
+Duplicate transaction records were identified using Pandas and removed to prevent repeated records from affecting future analysis.
+
+The number of duplicate records was documented before and after cleaning.
+
+### 3. Data Standardisation
+
+Inconsistent categorical formatting was standardised.
+
+For example:
+
+* Different capitalization was converted into a consistent format.
+* Extra spaces were removed.
+* Payment methods were standardised.
+* Transaction status values were standardised.
+
+### 4. Date Standardisation
+
+The `Transaction_Date` column was converted into the appropriate `datetime` format.
+
+This allows the dataset to be used reliably for future time-based analysis.
+
+### 5. Outlier Detection
+
+The **Interquartile Range (IQR)** method was used to identify outliers in numerical columns.
+
+Outliers in Quantity and Price were handled using capping rather than deleting complete transaction records.
+
+This approach preserves the transaction information while reducing the influence of extreme values.
+
+### 6. Data Type Correction
+
+Data types were corrected to make the dataset analysis-ready:
+
+* `Transaction_ID` → String
+* `Customer_ID` → String
+* `Transaction_Date` → Datetime
+* `Quantity` → Numeric
+* `Price` → Float
+
+---
+
+## 📊 Before vs After Analysis
+
+A before-and-after summary was created to compare:
+
+* Total number of rows
+* Total missing values
+* Duplicate records
+* Data type accuracy
+
+This comparison demonstrates the improvement in overall data quality after cleaning.
+
+---
+
+## 📁 Project Structure
+
+```text
+DataAnalytics-Task3-CleaningData/
+│
+├── Data_Cleaning.ipynb
+├── dirty_financial_transactions.csv
+├── cleaned_financial_transactions.csv
+├── README.md
+└── requirements.txt
+```
+
+---
+
+## 📄 Output
+
+The final cleaned dataset is saved as:
+
+```text
+cleaned_financial_transactions.csv
+```
+
+The cleaned file is ready for further analysis and data visualization.
+
+---
+
+## ▶️ How to Run the Project
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/OIBSIP.git
+```
+
+### 2. Navigate to the Project Folder
+
+```bash
+cd OIBSIP/DataAnalytics-Task3-CleaningData
+```
+
+### 3. Install Required Libraries
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run Jupyter Notebook
+
+```bash
+jupyter notebook
+```
+
+Open:
+
+```text
+Data_Cleaning.ipynb
+```
+
+---
+
+## 👨‍💻 Author
+
+**Suraj Kadam**
+
+---
+
+## 📌 Internship
+
+This project was completed as part of the  Data Analytics **.
+#dataanalytics #python #datacleaning 
