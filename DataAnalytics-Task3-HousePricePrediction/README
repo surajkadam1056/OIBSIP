@@ -1,0 +1,215 @@
+# House Price Prediction with Linear Regression
+
+### Project Overview
+
+This project focuses on predicting house prices using **Linear Regression**.
+
+The dataset contains different house-related features such as area, bedrooms, bathrooms, stories, parking, age, furnishing status, location-related information, and other property characteristics.
+
+The project covers data exploration, preprocessing, feature encoding, model training, evaluation, visualization, and coefficient analysis.
+
+---
+
+## 🎯 Objective
+
+The objective of this project is to build a machine learning model that can predict house prices based on available property features and evaluate the model using standard regression metrics.
+
+---
+
+## 🛠️ Tech Stack
+
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* Scikit-learn
+* Jupyter Notebook
+
+---
+
+## 📂 Dataset
+
+The project uses a **House Price Prediction Dataset** containing 2,000 house records.
+
+The target variable is:
+
+```text
+Price
+```
+
+Important features include:
+
+* Area
+* Bedrooms
+* Bathrooms
+* Stories
+* Parking
+* Age
+* City
+* Furnishing
+* Main Road
+* Guest Room
+* Basement
+* Water Supply
+* Air Conditioning
+* Preferred Tenant
+* Locality Rating
+
+---
+
+## 🔍 Exploratory Data Analysis
+
+The dataset was explored to understand its structure and characteristics.
+
+The following analysis was performed:
+
+* Dataset shape and columns
+* Data types
+* Missing value check
+* Descriptive statistics
+* House price distribution
+* Numerical feature correlation
+
+---
+
+## 📊 Data Visualization
+
+The following visualizations were created:
+
+### 1. Price Distribution
+
+A histogram was used to understand the distribution of house prices.
+
+### 2. Correlation Heatmap
+
+A correlation heatmap was created to understand relationships between numerical variables and the target price.
+
+### 3. Actual vs Predicted Prices
+
+A scatter plot was created to compare actual house prices with model-predicted prices.
+
+### 4. Residual Plot
+
+A residual plot was used to analyse the prediction errors of the Linear Regression model.
+
+### 5. Coefficient Analysis
+
+Model coefficients were analysed to understand which features had greater positive or negative influence on predicted prices.
+
+---
+
+## 🧹 Data Preprocessing
+
+Before training the model, the data was prepared using the following steps:
+
+* Missing numerical values were handled using median values.
+* Missing categorical values were handled using the mode.
+* Categorical features were converted into numerical form using **One-Hot Encoding**.
+* Numerical and categorical features were prepared for machine learning.
+
+---
+
+## 🤖 Model Building
+
+The dataset was divided into:
+
+* **80% Training Data**
+* **20% Testing Data**
+
+A **Linear Regression** model from Scikit-learn was trained using the training data.
+
+The trained model was then used to predict house prices on the test dataset.
+
+---
+
+## 📈 Model Evaluation
+
+The model was evaluated using:
+
+### Mean Squared Error (MSE)
+
+Measures the average squared difference between actual and predicted prices.
+
+### Root Mean Squared Error (RMSE)
+
+Represents the prediction error in the same unit as the target variable.
+
+### R² Score
+
+Shows how well the model explains the variation in house prices.
+
+---
+
+## ⭐ Bonus Model
+
+As an additional experiment, **Ridge Regression** was implemented and compared with Linear Regression.
+
+The models were compared using:
+
+* MSE
+* RMSE
+* R² Score
+
+---
+
+## 📁 Project Structure
+
+```text
+DataAnalytics-Task1-HousePricePrediction/
+│
+├── House_Price_Prediction.ipynb
+├── enhanced_house_price_dataset.csv
+├── README.md
+├── requirements.txt
+```
+
+---
+
+## ▶️ How to Run the Project
+
+### 1. Install Required Libraries
+
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Start Jupyter Notebook
+
+```bash
+jupyter notebook
+```
+
+### 3. Open the Notebook
+
+```text
+House_Price_Prediction.ipynb
+```
+
+Run the notebook cells from beginning to end.
+
+---
+
+## 📌 Key Learning Outcomes
+
+Through this project, I learned:
+
+* Exploratory Data Analysis
+* Data preprocessing
+* Handling missing values
+* One-Hot Encoding
+* Train-test splitting
+* Linear Regression
+* Regression model evaluation
+* Residual analysis
+* Feature coefficient interpretation
+* Ridge Regression
+
+---
+
+## 👨‍💻 Author
+
+**Suraj Kadam**
+
+
+ #dataanalytics #machinelearning #linearregression #python 
